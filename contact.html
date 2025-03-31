@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Saurabh Singhaniya</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: url('bgimage.jpeg')no-repeat center center;
+            background-size: 100% 100%; 
+            background-attachment: fixed;
+            color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            padding: 30px;
+            
+        }
+        
+
+        .contact-container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+            width: 90%;
+            max-width: 450px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeIn 1s ease-in-out;
+            margin-bottom: center;
+            align-items: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: #00c3ff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-info p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: #00c3ff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s ease-in-out;
+        }
+
+        .contact-info a:hover {
+            color: #ff0011;
+            text-shadow: 0 0 10px #000000;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 28px;
+            color: #00c3ff;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #ff00ff;
+            text-shadow: 0 0 15px #ff00ff;
+        }
+
+        /* Stylish Button */
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: linear-gradient(45deg, #00c3ff, #ff00ff);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 10px;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 4px 15px rgba(255, 0, 255, 0.5);
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: linear-gradient(45deg, #ff00ff, #00c3ff);
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 0, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <h1>Contact Me</h1>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:saurabhkumar20k5@gmail.com">saurabhkumar20k5@gmail.com</a></p>
+            <p>Phone: <a href="tel:+916202321756">+91 6202321756</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/saurabh-kumar-972355290/" target="_blank">My LinkedIn</a></p>
+            <p>GitHub: <a href="https://github.com/Mrsaurabhkumar123" target="_blank">My GitHub</a></p>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/saurabh-kumar-972355290/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/Mrsaurabhkumar123" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+
+        <a href="por.html" class="btn">Back to Home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurabh - Developer Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(3, 0, 2);
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            padding: 0 50px;
+            background-color: rgb(250, 11, 222);
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: aliceblue;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            font-size: 1.2rem;
+            color: green;
+        }
+
+        main hr {
+            border: 0;
+            background-color: rgb(115, 8, 187);
+            height: 1.2px;
+            margin: 60px 85px;
+        }
+
+        .left {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .firstsection {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            margin: 100px auto;
+            max-width: 90vw;
+        }
+
+        .leftsection {
+            font-size: 2rem;
+            max-width: 500px;
+        }
+
+        .leftsection .btn {
+            padding: 12px;
+            background-color: aqua;
+            border: white;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+
+        }
+        .leftsection .button{
+            padding: 25px;
+            
+            
+            
+        }
+
+        .rightsection img {
+            width: 250%;
+            max-width: 380px;
+            border-radius: 30px;
+        }
+
+        .purple {
+            color: blueviolet;
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        #element {
+            color: darkorange;
+            font-weight: bold;
+        }
+
+        .secondsection {
+            max-width: 80vw;
+            margin: auto;
+            text-align: center;
+        }
+
+        .secondsection .box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .vertical {
+            width: 250px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .images-top {
+            width: 80px;
+        }
+
+        .vertical-title {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .vertical-desc {
+            font-size: 1rem;
+            color: gray;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: #043d3d;
+
+
+        }
+
+        .footer-first {
+            display: flex;
+            margin: 5px 12px;
+            font-size: 2rem;
+            font-weight: 600;
+            font-style: inherit;
+        }
+
+        .footer-second {
+            display: flex;
+            justify-content:center;
+            list-style: none;
+            
+        }
+
+        .footer ul {
+            list-style: none;
+            margin: 0 10px;
+            position:static;
+        }
+        footer .footer-rights{
+            text-align: center;
+            text-decoration-color: azure;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left" id="dynamic-title"></div>
+
+<script>
+    const titles = [
+        "Saurabh Singhaniya Portfolio",
+        "🚀 Web Developer",
+        "🎥Vedio Editor",
+        "💡Web Designer",
+        "🎯 Future Innovator"
+    ];
+
+    let index = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+        let currentText = titles[index];
+        let displayedText = isDeleting
+            ? currentText.substring(0, charIndex--)
+            : currentText.substring(0, charIndex++);
+
+        document.getElementById("dynamic-title").innerText = displayedText;
+
+        let speed = isDeleting ? 50 : 100;
+
+        if (!isDeleting && displayedText === currentText) {
+            speed = 2000;
+            isDeleting = true;
+        } else if (isDeleting && displayedText === "") {
+            isDeleting = false;
+            index = (index + 1) % titles.length;
+        }
+
+        setTimeout(typeEffect, speed);
+    }
+
+    typeEffect();
+</script>
+
+            <ul>
+                <li><a href="por.html">Home</a></li> 
+                <li><a href="about .html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="http://saurabhsinghaniya.netlify.app">Projects</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                Hi, My Name Is <span class="purple"> Saurabh Singhaniya</span>
+                <div>And I am a passionate</div>
+                <span id="element"></span>
+                <div class="button">
+                    <a href="Surabh. Resume.pdf" download="Saurabh_Singhaniya_Resume.pdf">
+                        <button class="btn">Download Resume</button>
+                    </a>
+                    <a href="https://github.com/Mrsaurabhkumar123" target="visit github">
+                        <button class="btn">Visit Github</button>
+                    </a>
+                </div>
+                
+            </div>
+            <div class="rightsection">
+                <img src="saurabh .jpg.jpg" alt="Saurabh's Image">
+            </div>
+        </section>
+        <hr>
+        <section class="secondsection">
+            <span class="text-gray">What I Have Done So Far</span>
+            <h1>Work Experience</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="images-top" src="developer.png" alt="Developer">
+                    <div class="vertical-title">Web Developer (2023-2024)</div>
+                    <div class="vertical-desc">Worked on front-end and back-end development projects.</div>
+                </div>
+                <div class="vertical">
+                    <img class="images-top" src="developer.png" alt="Developer">
+                    <div class="vertical-title">Video Editor (2023-2024)</div>
+                    <div class="vertical-desc">Created and edited engaging video content for YouTube and social media.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="images-top" src="developer.png" alt="Developer">
+                    <div class="vertical-title">UI/UX Designer (2023-2024)</div>
+                    <div class="vertical-desc">Designed user-friendly and visually appealing interfaces.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h>Saurabh Developer Portfolio</h>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>mail.id</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="footer-rights">
+                www.SaurabhSinghaniyaportfolio.com  | All right reserved
+            </div>
+            <div class="footer-fourth">
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Video Editor', 'Web Designer'],
+            typeSpeed: 50,
+            loop: true
+        });
+    </script>
+</body>
+
+</html>
